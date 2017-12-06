@@ -1,0 +1,36 @@
+.sidenav {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.page-content {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-left: 320px;
+  background-color: #F6F6F7;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #FFF;
+}
+
+li button {
+  border: none;
+  background: none !important;
+  cursor: pointer;
+  margin: 0;
+  padding: 15px;
+  height: 80px;
+  width: 320px;
+}
