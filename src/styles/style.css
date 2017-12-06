@@ -1,6 +1,12 @@
+body {
+  font-family: Helvetica;
+  color: #333333;
+}
+
 .sidenav {
   height: 100%;
   position: fixed;
+  margin: 0;
   z-index: 1;
   top: 0;
   left: 0;
@@ -8,14 +14,66 @@
   transition: 0.5s;
 }
 
-.page-content {
+.page-bg {
   height: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   margin-left: 320px;
   background-color: #F6F6F7;
+}
+
+.page-subject {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.page-actions {
+  float: right;
+  display: flex;
+}
+
+.page-actions img, div {
+  margin: 0 10px;
+}
+
+.page-action-unread {
+  border-radius: 50%;
+  width: 19px;
+  height: 19px;
+  background: #B8B8B8;
+}
+
+.page-contact {
+  font-size: 16px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.page-from {
+  display: inline;
+  color: #7070ff;
+}
+
+.page-date {
+  float: right;
+  font-size: 12px;
+  color: #8B8B8B;
+}
+
+.page-content {
+  font-size: 14px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px -2px #B5B5B5;
 }
 
 ul {
