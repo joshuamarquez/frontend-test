@@ -7,7 +7,7 @@ class SidebarListItem extends React.Component {
             <li>
                 <button onClick={() => this.props.onClick(this.props.email.id)}>
                     <div className="contact">
-                        {this.props.email.from}
+                        {this.props.email.contact}
                     </div>
                     <div className="subject">
                         {this.props.email.subject}

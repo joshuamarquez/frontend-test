@@ -30,7 +30,7 @@ class EmailClient extends React.Component {
       <div>
         <Sidebar emailList={emailList}
                  onClick={this.handleClick} />
-        <PageContent currentEmail={this.state.currentEmail} />
+        <PageContent email={this.state.currentEmail} />
       </div>
     );
   }
