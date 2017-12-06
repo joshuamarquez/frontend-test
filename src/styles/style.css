@@ -91,4 +91,15 @@ li button {
   padding: 15px;
   height: 80px;
   width: 320px;
+  font-size: 12px;
+  border-bottom: solid 1px #B5B5B5;
+  text-align: left;
+}
+
+.contact {
+  font-weight: bold;
+}
+
+.body-desc {
+  color: #9B9B9B;
 }
