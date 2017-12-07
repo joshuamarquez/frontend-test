@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import '../styles/style.css';
-import contactIcon from '../contact.svg';
+import contactIcon from '../icons/contact.svg';
 
 class SidebarListItem extends React.Component {
     render() {
