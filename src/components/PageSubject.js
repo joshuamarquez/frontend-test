@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/style.css';
-import trashIcon from '../trash.svg'
-import spamIcon from '../spam.svg'
+import trashIcon from '../icons/trash.svg'
+import spamIcon from '../icons/spam.svg'
 
 class PageSubject extends React.Component {
     render() {

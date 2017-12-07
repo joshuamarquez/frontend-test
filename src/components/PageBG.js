@@ -2,7 +2,7 @@ import React from 'react';
 import PageSubject from './PageSubject';
 import PageContent from './PageContent';
 import '../styles/style.css';
-import emailIcon from '../email.svg';
+import emailIcon from '../icons/email.svg';
 
 class PageBG extends React.Component {
     render() {
