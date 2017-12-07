@@ -100,6 +100,10 @@ li button {
   font-weight: bold;
 }
 
-.body-desc {
+.sub-text {
   color: #9B9B9B;
+}
+
+.mail-date {
+  float: right;
 }
