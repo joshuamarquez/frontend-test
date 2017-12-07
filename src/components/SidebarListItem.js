@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import '../styles/style.css';
+import contactIcon from '../contact.svg';
 
 class SidebarListItem extends React.Component {
     render() {
@@ -17,6 +18,7 @@ class SidebarListItem extends React.Component {
                 {selectedBar}
                 <button onClick={() => this.props.onClick(this.props.email.id)}
                         className={selectedStyle}>
+                    <img src={contactIcon} alt="spam icon" />
                     <div className="contact">
                         {this.props.email.contact}
                         <div className="mail-date sub-text">
