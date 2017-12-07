@@ -24,7 +24,16 @@ body {
   right: 0;
   left: 0;
   margin-left: 320px;
+  margin-right: 0;
   background-color: #F6F6F7;
+}
+
+.page-empty {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -125px;
+  margin-left: 32px;
 }
 
 .page-subject {
