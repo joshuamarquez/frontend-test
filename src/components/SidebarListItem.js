@@ -29,7 +29,7 @@ class SidebarListItem extends React.Component {
                         {this.props.email.subject}
                     </div>
                     <div className="body-desc sub-text">
-                        {`${this.props.email.body.slice(0, 10)}...`}
+                        {`${this.props.email.body.slice(0, 40)}...`}
                     </div>
                 </button>
             </li>
