@@ -101,6 +101,13 @@ li button:focus {
   outline:0;
 }
 
+.mail-selected-bar {
+  border-left: thick solid #4990E2;
+  position: absolute;
+  margin: 0;
+  height: 80px;
+}
+
 .mail-selected {
   background-color: #F9F9F9 !important;
 }
