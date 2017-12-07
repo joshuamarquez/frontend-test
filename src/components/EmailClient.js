@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from './Sidebar';
-import PageContent from './PageContent';
+import PageBG from './PageBG';
 import emailList from '../data.json';
 
 class EmailClient extends React.Component {
@@ -9,7 +9,7 @@ class EmailClient extends React.Component {
     super(props);
 
     this.state = {
-      currentEmail: {},
+      currentEmail: null,
       emailList,
     };
 
@@ -38,7 +38,7 @@ class EmailClient extends React.Component {
         <Sidebar emailList={emailList}
                  emailSelected={this.state.currentEmail}
                  onClick={this.handleClick} />
-        <PageContent email={this.state.currentEmail} />
+        <PageBG email={this.state.currentEmail} />
       </div>
     );
   }

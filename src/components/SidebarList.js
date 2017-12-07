@@ -6,8 +6,9 @@ class SidebarList extends React.Component {
     render() {
         const list = this.props.emailList.map((item) => {
             let isSelected = false;
+            const emailSelected = this.props.emailSelected;
 
-            if (this.props.emailSelected.id === item.id) {
+            if (emailSelected && emailSelected.id === item.id) {
                 isSelected = true;
             }
 
