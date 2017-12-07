@@ -13,9 +13,16 @@ class SidebarListItem extends React.Component {
             selectedBar = <div className="mail-selected-bar" />;
         }
 
+        let isReadedTag;
+
+        if (!this.props.email.isReaded) {
+            isReadedTag = <div className="unread"></div>;
+        }
+
         return (
             <li>
                 {selectedBar}
+                {isReadedTag}
                 <button onClick={() => this.props.onClick(this.props.email.id)}
                         className={selectedStyle}>
                     <img src={contactIcon} alt="spam icon" />

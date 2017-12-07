@@ -102,6 +102,15 @@ li button > img {
   margin: 0 5px 0 12px;
 }
 
+li > .unread {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #4990E2;
+  position: absolute;
+  margin-top: 34px;
+}
+
 li button:focus {
   outline:0;
 }
