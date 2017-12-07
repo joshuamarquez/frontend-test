@@ -9,9 +9,15 @@ class PageSubject extends React.Component {
             <div className="page-subject">
                 {this.props.email.subject}
                 <div className="page-actions">
-                    <div className="page-action-unread"></div>
-                    <img src={trashIcon} alt="trash icon" />
-                    <img src={spamIcon} alt="spam icon" />
+                    <button>
+                        <div className="page-action-unread"></div>
+                    </button>
+                    <button>
+                        <img src={trashIcon} alt="trash icon" />
+                    </button>
+                    <button>
+                        <img src={spamIcon} alt="spam icon" />
+                    </button>
                 </div>
             </div>
         );

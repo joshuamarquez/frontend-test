@@ -3,6 +3,16 @@ body {
   color: #333333;
 }
 
+button {
+  border: none;
+  background: none !important;
+  cursor: pointer;
+}
+
+button:focus {
+  outline:0;
+}
+
 .sidenav {
   height: 100%;
   position: fixed;
@@ -47,8 +57,9 @@ body {
   display: flex;
 }
 
-.page-actions img, div {
+.page-actions button {
   margin: 0 10px;
+  padding: 0;
 }
 
 .page-action-unread {
@@ -94,11 +105,8 @@ ul {
 }
 
 li button {
-  border: none;
-  background: none !important;
-  cursor: pointer;
   margin: 0;
-  padding: 15px;
+  padding: 15px 15px 15px 25px;
   height: 80px;
   width: 320px;
   font-size: 12px;
@@ -108,7 +116,7 @@ li button {
 
 li button > img {
   float: left;
-  margin: 0 5px 0 12px;
+  margin-right: 5px;
 }
 
 li > .unread {
@@ -117,11 +125,8 @@ li > .unread {
   height: 10px;
   background: #4990E2;
   position: absolute;
-  margin-top: 34px;
-}
-
-li button:focus {
-  outline:0;
+  margin-top: 35px;
+  margin-left: 10px;
 }
 
 .mail-selected-bar {

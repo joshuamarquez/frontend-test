@@ -8,13 +8,13 @@ class PageBG extends React.Component {
     render() {
         let content;
 
-        console.log(this.props.email);
         if (!this.props.email) { 
             content = <img className="page-empty" src={emailIcon} alt="email icon" />
         } else {
             content = (
                 <div>
-                    <PageSubject email={this.props.email} />
+                    <PageSubject email={this.props.email}
+                                 emailAction={this.props.emailAction} />
                     <PageContent email={this.props.email} />
                 </div>
             );
