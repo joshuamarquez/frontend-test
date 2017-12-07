@@ -14,22 +14,45 @@ class EmailClient extends React.Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
+    this.handleAction = this.handleAction.bind(this);
   }
 
-  handleClick(id) {
-    const emailIndex = emailList.findIndex(email => email.id === id);
+  getEmailIndex(id) {
+    return emailList.findIndex(email => email.id === id);
+  }
 
-    if (emailIndex !== -1) {
+  updateEmailStatus(action, index) {
+    if (index !== -1) {
       const emailListCopy = [...emailList];
-      const emailCopy = emailListCopy[emailIndex];
+      const emailCopy = emailListCopy[index];
+      let currentEmail = null;
       
-      emailCopy.isReaded = true;
+      switch (action) {
+        case 'READ': 
+          emailCopy.isReaded = true;
+          currentEmail = emailCopy;
+          break;
+
+        case 'TRASH': 
+          emailCopy.trash = true;
+          break;
+
+        default: ;
+      }
       
       this.setState({
-        currentEmail: emailCopy,
+        currentEmail,
         emailList: emailListCopy,
       });
     }
+  }
+
+  handleClick(id) {
+    this.updateEmailStatus('READ', this.getEmailIndex(id));
+  }
+
+  handleAction(action, id) {
+    this.updateEmailStatus('TRASH', this.getEmailIndex(id));
   }
 
   render() {
@@ -38,7 +61,8 @@ class EmailClient extends React.Component {
         <Sidebar emailList={emailList}
                  emailSelected={this.state.currentEmail}
                  onClick={this.handleClick} />
-        <PageBG email={this.state.currentEmail} />
+        <PageBG email={this.state.currentEmail}
+                emailAction={this.handleAction} />
       </div>
     );
   }
