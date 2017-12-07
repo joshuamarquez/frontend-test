@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import '../styles/style.css';
 
 class SidebarListItem extends React.Component {
@@ -9,7 +10,7 @@ class SidebarListItem extends React.Component {
                     <div className="contact">
                         {this.props.email.contact}
                         <div className="mail-date sub-text">
-                            {this.props.email.date}
+                            {moment(this.props.email.date).format('MMM DD')}
                         </div>
                     </div>
                     <div className="subject">
