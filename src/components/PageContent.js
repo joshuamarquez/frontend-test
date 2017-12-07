@@ -1,11 +1,13 @@
 import React from 'react';
+import moment from 'moment';
 import '../styles/style.css';
 import trashIcon from '../trash.svg'
 import spamIcon from '../spam.svg'
 
 class PageContent extends React.Component {
     render() {
-        const emailDate = new Date(this.props.email.date).toString();
+        const m = moment(this.props.email.date);
+        const emailDate = m.format('dddd, MMM DD, HH:mm A');
 
         return (
             <div className="page-bg">
