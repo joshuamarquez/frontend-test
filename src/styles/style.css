@@ -12,6 +12,7 @@ body {
   left: 0;
   overflow-x: hidden;
   transition: 0.5s;
+  border-right: solid 1px #B5B5B5;
 }
 
 .page-bg {
@@ -91,4 +92,39 @@ li button {
   padding: 15px;
   height: 80px;
   width: 320px;
+  font-size: 12px;
+  border-bottom: solid 1px #B5B5B5;
+  text-align: left;
+}
+
+li button > img {
+  float: left;
+  margin: 0 5px 0 12px;
+}
+
+li button:focus {
+  outline:0;
+}
+
+.mail-selected-bar {
+  border-left: thick solid #4990E2;
+  position: absolute;
+  margin: 0;
+  height: 80px;
+}
+
+.mail-selected {
+  background-color: #F9F9F9 !important;
+}
+
+.contact {
+  font-weight: bold;
+}
+
+.sub-text {
+  color: #9B9B9B;
+}
+
+.mail-date {
+  float: right;
 }

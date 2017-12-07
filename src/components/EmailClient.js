@@ -16,7 +16,7 @@ class EmailClient extends React.Component {
   }
 
   handleClick(id) {
-    const emailFound = emailList.find(email => email.id === id);
+    const emailFound = {...emailList.find(email => email.id === id)};
 
     if (emailFound) {
       this.setState({
@@ -29,6 +29,7 @@ class EmailClient extends React.Component {
     return (
       <div>
         <Sidebar emailList={emailList}
+                 emailSelected={this.state.currentEmail}
                  onClick={this.handleClick} />
         <PageContent email={this.state.currentEmail} />
       </div>

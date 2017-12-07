@@ -7,6 +7,7 @@ class Sidebar extends React.Component {
         return (
             <div className="sidenav">
                 <SidebarList emailList={this.props.emailList}
+                             emailSelected={this.props.emailSelected}
                              onClick={this.props.onClick} />
             </div>
         );
