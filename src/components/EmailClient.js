@@ -10,17 +10,24 @@ class EmailClient extends React.Component {
 
     this.state = {
       currentEmail: {},
+      emailList,
     };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(id) {
-    const emailFound = {...emailList.find(email => email.id === id)};
+    const emailIndex = emailList.findIndex(email => email.id === id);
 
-    if (emailFound) {
+    if (emailIndex !== -1) {
+      const emailListCopy = [...emailList];
+      const emailCopy = emailListCopy[emailIndex];
+      
+      emailCopy.isReaded = true;
+      
       this.setState({
-        currentEmail: emailFound,
+        currentEmail: emailCopy,
+        emailList: emailListCopy,
       });
     }
   }
