@@ -96,6 +96,10 @@ li button {
   text-align: left;
 }
 
+.mail-selected {
+  background-color: #F9F9F9 !important;
+}
+
 .contact {
   font-weight: bold;
 }

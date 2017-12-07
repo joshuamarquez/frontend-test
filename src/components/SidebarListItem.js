@@ -4,9 +4,16 @@ import '../styles/style.css';
 
 class SidebarListItem extends React.Component {
     render() {
+        let selectedStyle = '';
+
+        if (this.props.isSelected) {
+            selectedStyle = 'mail-selected';
+        }
+
         return (
             <li>
-                <button onClick={() => this.props.onClick(this.props.email.id)}>
+                <button onClick={() => this.props.onClick(this.props.email.id)}
+                        className={selectedStyle}>
                     <div className="contact">
                         {this.props.email.contact}
                         <div className="mail-date sub-text">
