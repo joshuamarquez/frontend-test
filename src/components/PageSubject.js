@@ -5,6 +5,8 @@ import spamIcon from '../icons/spam.svg'
 
 class PageSubject extends React.Component {
     render() {
+        const id = this.props.email.id;
+
         return (
             <div className="page-subject">
                 {this.props.email.subject}
@@ -12,7 +14,7 @@ class PageSubject extends React.Component {
                     <button>
                         <div className="page-action-unread"></div>
                     </button>
-                    <button>
+                    <button onClick={() => this.props.emailAction('TRASH', id)}>
                         <img src={trashIcon} alt="trash icon" />
                     </button>
                     <button>

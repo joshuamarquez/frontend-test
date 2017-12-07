@@ -12,6 +12,10 @@ class SidebarList extends React.Component {
                 isSelected = true;
             }
 
+            if (item.trash) {
+                return null;
+            }
+
             return <SidebarListItem key={item.id}
                                     onClick={this.props.onClick}
                                     isSelected={isSelected}
