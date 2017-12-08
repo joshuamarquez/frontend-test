@@ -147,7 +147,7 @@ li button {
   text-align: left;
 }
 
-li button > img {
+li button > svg {
   float: left;
   margin-right: 5px;
 }
