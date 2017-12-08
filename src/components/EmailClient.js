@@ -34,7 +34,7 @@ class EmailClient extends React.Component {
           break;
 
         case 'TRASH': 
-          emailCopy.trash = true;
+          emailCopy.state = 'TRASH';
           break;
 
         default: ;

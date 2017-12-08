@@ -14,9 +14,15 @@ class PageSubject extends React.Component {
                     <button>
                         <div className="page-action-unread"></div>
                     </button>
-                    <button onClick={() => this.props.emailAction('TRASH', id)}>
-                        <img src={trashIcon} alt="trash icon" />
-                    </button>
+                    {
+                        this.props.email.state !== 'TRASH'
+                        ? (
+                            <button onClick={() => this.props.emailAction('TRASH', id)}>
+                                <img src={trashIcon} alt="trash icon" />
+                            </button>
+                        )
+                        : null
+                    }
                     <button>
                         <img src={spamIcon} alt="spam icon" />
                     </button>
