@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/style.css';
-import trashIcon from '../icons/trash.svg'
-import spamIcon from '../icons/spam.svg'
+import TrashIcon from '../icons/Trash'
+import SpamIcon from '../icons/Spam'
 
 class PageSubject extends React.Component {
     render() {
@@ -18,13 +18,13 @@ class PageSubject extends React.Component {
                         this.props.email.state !== 'TRASH'
                         ? (
                             <button onClick={() => this.props.emailAction('TRASH', id)}>
-                                <img src={trashIcon} alt="trash icon" />
+                                <TrashIcon width="19" height="19" fill="#B5B5B5" />
                             </button>
                         )
                         : null
                     }
                     <button>
-                        <img src={spamIcon} alt="spam icon" />
+                        <SpamIcon width="19" height="19" fill="#B5B5B5"  />
                     </button>
                 </div>
             </div>
