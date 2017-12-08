@@ -12,7 +12,7 @@ class SidebarList extends React.Component {
                 isSelected = true;
             }
 
-            if (item.trash) {
+            if (item.state !== this.props.currentState) {
                 return null;
             }
 
@@ -20,12 +20,19 @@ class SidebarList extends React.Component {
                                     onClick={this.props.onClick}
                                     isSelected={isSelected}
                                     email={item} />
-        });
+        })
+
+        // Remove null items
+        .filter(i => i !== null);
 
         return (
+            list.length > 0
+            ?
             <ul>
                 {list}
             </ul>
+            :
+            <div className="sidenav-list-empty">Empty</div>
         );
     }
 }

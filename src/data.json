@@ -8,7 +8,7 @@
         "body": "condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis",
         "date": "2017-12-07T06:16:15.647Z",
         "isReaded": false,
-        "trash": false,
+        "state": "INBOX",
         "avatar": "https://robohash.org/dignissimosetsuscipit.jpg?size=50x50&set=set1",
         "tag": "Indigo",
         "attachements": [
@@ -27,7 +27,7 @@
         "body": "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
         "date": "2017-10-07T12:09:53.647Z",
         "isReaded": false,
-        "trash": false,
+        "state": "INBOX",
         "avatar": "https://robohash.org/aliquamautdolore.jpg?size=50x50&set=set1",
         "tag": "Teal",
         "attachements": [
