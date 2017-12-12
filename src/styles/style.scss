@@ -1,3 +1,6 @@
+$border: #B5B5B5;
+$primary-color: #4990E2;
+
 body {
   font-family: Helvetica;
   color: #333333;
@@ -22,14 +25,14 @@ button:focus {
   left: 0;
   overflow-x: hidden;
   transition: 0.5s;
-  border-right: solid 1px #B5B5B5;
+  border-right: solid 1px $border;
 }
 
 .sidenav-header {
   margin: 0;
   padding: 5px;
   height: 40px;
-  border-bottom: solid 2px #B5B5B5;
+  border-bottom: solid 2px $border;
 }
 
 .sidenav-list-empty {
@@ -44,18 +47,18 @@ button:focus {
   font-size: 10px;
   display: flex;
   float: right;
-}
 
-.sidenav-header-item .selected {
-  color: #4990E2;
-}
+  .selected {
+    color: $primary-color;
+  }
 
-.sidenav-header-item div {
-  margin-right: 5px;
-}
+  div {
+    margin-right: 5px;
+  }
 
-.sidenav-header-item div:last-child {
-  margin-top: 1px;
+  div:last-child {
+    margin-top: 1px;
+  }
 }
 
 .page-bg {
@@ -88,11 +91,11 @@ button:focus {
 .page-actions {
   float: right;
   display: flex;
-}
 
-.page-actions button {
-  margin: 0 10px;
-  padding: 0;
+  button {
+    margin: 0 10px;
+    padding: 0;
+  }
 }
 
 .page-contact {
@@ -120,7 +123,7 @@ button:focus {
   padding-bottom: 50px;
   background-color: #FFF;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px -2px #B5B5B5;
+  box-shadow: 0px 0px 10px -2px $border;
 }
 
 ul {
@@ -130,33 +133,35 @@ ul {
   background-color: #FFF;
 }
 
-li button {
-  margin: 0;
-  padding: 15px 15px 15px 25px;
-  height: 80px;
-  width: 320px;
-  font-size: 12px;
-  border-bottom: solid 1px #B5B5B5;
-  text-align: left;
-}
+li {
+  button {
+    margin: 0;
+    padding: 15px 15px 15px 25px;
+    height: 80px;
+    width: 320px;
+    font-size: 12px;
+    border-bottom: solid 1px $border;
+    text-align: left;
 
-li button > svg {
-  float: left;
-  margin-right: 5px;
-}
+    > svg {
+      float: left;
+      margin-right: 5px;
+    }
+  }
 
-li > .unread {
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background: #4990E2;
-  position: absolute;
-  margin-top: 35px;
-  margin-left: 10px;
+  > .unread {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: $primary-color;
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 10px;
+  }
 }
 
 .mail-selected-bar {
-  border-left: thick solid #4990E2;
+  border-left: thick solid $primary-color;
   position: absolute;
   margin: 0;
   height: 80px;
