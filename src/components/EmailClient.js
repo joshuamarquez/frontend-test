@@ -37,6 +37,10 @@ class EmailClient extends React.Component {
           emailCopy.state = 'TRASH';
           break;
 
+        case 'SPAM':
+          emailCopy.state = 'SPAM';
+          break;
+
         default: ;
       }
       
@@ -52,7 +56,7 @@ class EmailClient extends React.Component {
   }
 
   handleAction(action, id) {
-    this.updateEmailStatus('TRASH', this.getEmailIndex(id));
+    this.updateEmailStatus(action, this.getEmailIndex(id));
   }
 
   render() {
