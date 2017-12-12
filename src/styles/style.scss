@@ -1,14 +1,17 @@
 body {
   font-family: Helvetica;
-  color: #333333; }
+  color: #333333;
+}
 
 button {
   border: none;
   background: none !important;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 button:focus {
-  outline: 0; }
+  outline:0;
+}
 
 .sidenav {
   height: 100%;
@@ -19,34 +22,41 @@ button:focus {
   left: 0;
   overflow-x: hidden;
   transition: 0.5s;
-  border-right: solid 1px #B5B5B5; }
+  border-right: solid 1px #B5B5B5;
+}
 
 .sidenav-header {
   margin: 0;
   padding: 5px;
   height: 40px;
-  border-bottom: solid 2px #B5B5B5; }
+  border-bottom: solid 2px #B5B5B5;
+}
 
 .sidenav-list-empty {
   width: 320px;
   text-align: center;
   margin-top: 40px;
-  color: #B6B6B5; }
+  color: #B6B6B5;
+}
 
 .sidenav-header-item {
   padding: 13px 8px;
   font-size: 10px;
   display: flex;
-  float: right; }
+  float: right;
+}
 
 .sidenav-header-item .selected {
-  color: #4990E2; }
+  color: #4990E2;
+}
 
 .sidenav-header-item div {
-  margin-right: 5px; }
+  margin-right: 5px;
+}
 
 .sidenav-header-item div:last-child {
-  margin-top: 1px; }
+  margin-top: 1px;
+}
 
 .page-bg {
   height: 100%;
@@ -58,42 +68,50 @@ button:focus {
   left: 0;
   margin-left: 320px;
   margin-right: 0;
-  background-color: #F6F6F7; }
+  background-color: #F6F6F7;
+}
 
 .page-empty {
   position: fixed;
   top: 50%;
   left: 50%;
   margin-top: -125px;
-  margin-left: 32px; }
+  margin-left: 32px;
+}
 
 .page-subject {
   padding-top: 20px;
   padding-bottom: 20px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .page-actions {
   float: right;
-  display: flex; }
+  display: flex;
+}
 
 .page-actions button {
   margin: 0 10px;
-  padding: 0; }
+  padding: 0;
+}
 
 .page-contact {
   font-size: 16px;
   padding-top: 40px;
   padding-bottom: 20px;
-  margin: 0; }
+  margin: 0;
+}
 
 .page-from {
   display: inline;
-  color: #7070ff; }
+  color: #7070ff;
+}
 
 .page-date {
   float: right;
   font-size: 12px;
-  color: #8B8B8B; }
+  color: #8B8B8B;
+}
 
 .page-content {
   font-size: 14px;
@@ -102,13 +120,15 @@ button:focus {
   padding-bottom: 50px;
   background-color: #FFF;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px -2px #B5B5B5; }
+  box-shadow: 0px 0px 10px -2px #B5B5B5;
+}
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #FFF; }
+  background-color: #FFF;
+}
 
 li button {
   margin: 0;
@@ -117,11 +137,13 @@ li button {
   width: 320px;
   font-size: 12px;
   border-bottom: solid 1px #B5B5B5;
-  text-align: left; }
+  text-align: left;
+}
 
 li button > svg {
   float: left;
-  margin-right: 5px; }
+  margin-right: 5px;
+}
 
 li > .unread {
   border-radius: 50%;
@@ -130,22 +152,28 @@ li > .unread {
   background: #4990E2;
   position: absolute;
   margin-top: 35px;
-  margin-left: 10px; }
+  margin-left: 10px;
+}
 
 .mail-selected-bar {
   border-left: thick solid #4990E2;
   position: absolute;
   margin: 0;
-  height: 80px; }
+  height: 80px;
+}
 
 .mail-selected {
-  background-color: #F9F9F9 !important; }
+  background-color: #F9F9F9 !important;
+}
 
 .contact {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .sub-text {
-  color: #9B9B9B; }
+  color: #9B9B9B;
+}
 
 .mail-date {
-  float: right; }
+  float: right;
+}
