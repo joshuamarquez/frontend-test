@@ -33,6 +33,11 @@ class EmailClient extends React.Component {
           currentEmail = emailCopy;
           break;
 
+        case 'UNREAD': 
+          emailCopy.isReaded = false;
+          currentEmail = null;
+          break;
+
         case 'TRASH': 
           emailCopy.state = 'TRASH';
           break;

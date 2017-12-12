@@ -12,7 +12,7 @@ class PageSubject extends React.Component {
             <div className="page-subject">
                 {this.props.email.subject}
                 <div className="page-actions">
-                    <button>
+                    <button onClick={() => this.props.emailAction('UNREAD', id)}>
                         <UnreadIcon width="19" height="19" fill="#B5B5B5" />
                     </button>
                     {
