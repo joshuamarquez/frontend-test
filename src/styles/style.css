@@ -95,13 +95,6 @@ button:focus {
   padding: 0;
 }
 
-.page-action-unread {
-  border-radius: 50%;
-  width: 19px;
-  height: 19px;
-  background: #B8B8B8;
-}
-
 .page-contact {
   font-size: 16px;
   padding-top: 40px;
