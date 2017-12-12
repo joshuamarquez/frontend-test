@@ -23,9 +23,15 @@ class PageSubject extends React.Component {
                         )
                         : null
                     }
-                    <button>
-                        <SpamIcon width="19" height="19" fill="#B5B5B5"  />
-                    </button>
+                    {
+                        this.props.email.state !== 'SPAM'
+                        ? (
+                            <button onClick={() => this.props.emailAction('SPAM', id)}>
+                                <SpamIcon width="19" height="19" fill="#B5B5B5"  />
+                            </button>
+                        )
+                        : null
+                    }
                 </div>
             </div>
         );
