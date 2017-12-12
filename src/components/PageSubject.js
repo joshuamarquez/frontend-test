@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/style.css';
+import UnreadIcon from '../icons/Unread'
 import TrashIcon from '../icons/Trash'
 import SpamIcon from '../icons/Spam'
 
@@ -11,8 +12,8 @@ class PageSubject extends React.Component {
             <div className="page-subject">
                 {this.props.email.subject}
                 <div className="page-actions">
-                    <button>
-                        <div className="page-action-unread"></div>
+                    <button onClick={() => this.props.emailAction('UNREAD', id)}>
+                        <UnreadIcon width="19" height="19" fill="#B5B5B5" />
                     </button>
                     {
                         this.props.email.state !== 'TRASH'
