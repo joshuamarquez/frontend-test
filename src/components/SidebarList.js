@@ -4,32 +4,32 @@ import '../styles/style.css';
 
 class SidebarList extends React.Component {
     render() {
-        const list = this.props.emailList.map((item) => {
+        const emails = this.props.emails.map((email) => {
             let isSelected = false;
-            const emailSelected = this.props.emailSelected;
+            const currentEmail = this.props.currentEmail;
 
-            if (emailSelected && emailSelected.id === item.id) {
+            if (currentEmail && currentEmail.id === email.id) {
                 isSelected = true;
             }
 
-            if (item.state !== this.props.currentState) {
+            if (email.state !== this.props.visibilityFilter) {
                 return null;
             }
 
-            return <SidebarListItem key={item.id}
-                                    onClick={this.props.onClick}
+            return <SidebarListItem key={email.id}
+                                    onEmailClick={this.props.onEmailClick}
                                     isSelected={isSelected}
-                                    email={item} />
+                                    email={email} />
         })
 
         // Remove null items
         .filter(i => i !== null);
 
         return (
-            list.length > 0
+            emails.length > 0
             ?
             <ul>
-                {list}
+                {emails}
             </ul>
             :
             <div className="sidenav-list-empty">Empty</div>

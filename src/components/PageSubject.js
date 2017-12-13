@@ -12,13 +12,13 @@ class PageSubject extends React.Component {
             <div className="page-subject">
                 {this.props.email.subject}
                 <div className="page-actions">
-                    <button title="Mark as unread" onClick={() => this.props.emailAction('UNREAD', id)}>
+                    <button title="Mark as unread" onClick={() => this.props.markAsUnread(id)}>
                         <UnreadIcon width="19" height="19" fill="#B5B5B5" />
                     </button>
                     {
                         this.props.email.state !== 'TRASH'
                         ? (
-                            <button title="Delete" onClick={() => this.props.emailAction('TRASH', id)}>
+                            <button title="Delete" onClick={() => this.props.trash(id)}>
                                 <TrashIcon width="19" height="19" fill="#B5B5B5" />
                             </button>
                         )
@@ -27,7 +27,7 @@ class PageSubject extends React.Component {
                     {
                         this.props.email.state !== 'SPAM'
                         ? (
-                            <button title="Report spam" onClick={() => this.props.emailAction('SPAM', id)}>
+                            <button title="Report spam" onClick={() => this.props.reportSpam(id)}>
                                 <SpamIcon width="19" height="19" fill="#B5B5B5"  />
                             </button>
                         )
@@ -35,7 +35,7 @@ class PageSubject extends React.Component {
                     }
                 </div>
             </div>
-        );
+        );        
     }
 }
 
