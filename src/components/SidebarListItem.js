@@ -23,7 +23,7 @@ class SidebarListItem extends React.Component {
             <li>
                 {selectedBar}
                 {isReadedTag}
-                <button onClick={() => this.props.onClick(this.props.email.id)}
+                <button onClick={() => this.props.onEmailClick(this.props.email.id)}
                         className={selectedStyle}>
                     <ContactIcon width="12" height="12" fill="#333333" />
                     <div className="contact">

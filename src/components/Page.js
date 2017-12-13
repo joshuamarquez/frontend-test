@@ -1,21 +1,20 @@
 import React from 'react';
-import PageSubject from './PageSubject';
+import PageSubject from '../containers/PageSubject';
 import PageContent from './PageContent';
 import '../styles/style.css';
 import emailIcon from '../icons/email.svg';
 
-class PageBG extends React.Component {
+class Page extends React.Component {
     render() {
         let content;
 
-        if (!this.props.email) { 
+        if (!this.props.currentEmail) { 
             content = <img className="page-empty" src={emailIcon} alt="email icon" />
         } else {
             content = (
                 <div>
-                    <PageSubject email={this.props.email}
-                                 emailAction={this.props.emailAction} />
-                    <PageContent email={this.props.email} />
+                    <PageSubject />
+                    <PageContent email={this.props.currentEmail} />
                 </div>
             );
         }
@@ -28,4 +27,4 @@ class PageBG extends React.Component {
     }
 }
 
-export default PageBG;
+export default Page;

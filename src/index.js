@@ -1,7 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import EmailClient from './components/EmailClient';
 import registerServiceWorker from './registerServiceWorker';
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import emailApp from './reducers'
+import App from './components/App'
 
-ReactDOM.render(<EmailClient />, document.getElementById('root'));
+let store = createStore(emailApp);
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
+
 registerServiceWorker();
+
+

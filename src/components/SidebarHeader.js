@@ -31,16 +31,22 @@ class SidebarHeader extends React.Component {
     }
 
     render() {
+        const items = [
+            { id: 'SPAM', text: 'Spam' },
+            { id: 'TRASH', text: 'Trash' },
+            { id: 'INBOX', text: 'Inbox' },
+        ];
+
         return (
             <div className="sidenav-header">
-                {this.props.items.map((item, index) => {
-                    const isSelected = item.id === this.props.itemSelected;
+                {items.map((item, index) => {
+                    const isSelected = item.id === this.props.visibilityFilter;
                     item.icon = this.getIcon(item.text, isSelected);
 
                     return <SidebarHeaderItem key={item.id}
                                               item={item}
                                               isSelected={isSelected}
-                                              onclick={this.props.onclick} />;
+                                              onclick={this.props.onEmailFilterClick} />;
                 })}
             </div>
         );
