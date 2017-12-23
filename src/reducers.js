@@ -10,6 +10,7 @@ import {
     REPORT_SPAM,
     SET_CURRENT_EMAIL,
     SET_VISIBILITY_FILTER,
+    RECEIVE_EMAIL,
     VisibilityFilters,
 } from './actions';
 import emailsInitData from './data.json';
@@ -43,6 +44,8 @@ function emails(state = emailsInitData, action) {
             return emailState(state, action.id, 'TRASH');
         case REPORT_SPAM:
             return emailState(state, action.id, 'SPAM');
+        case RECEIVE_EMAIL:
+            return [action.email, ...state];
         default:
             return state;
     }
